@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Life Dashboard — To-Do & Focus</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="time-wrap">
+      <div id="time" class="time">--:--:--</div>
+      <div id="date" class="date">Loading date...</div>
+    </div>
+    <div class="greeting-wrap">
+      <div id="greeting" class="greeting">Hello</div>
+      <button id="nameBtn" class="name-btn" title="Set your name">Set name</button>
+      <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel todos">
+      <h2>To-Do</h2>
+      <form id="taskForm" class="inline-form">
+        <input id="taskInput" placeholder="Add a new task and press Enter" autocomplete="off">
+        <select id="sortSelect" title="Sort tasks">
+          <option value="manual">Manual</option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="incomplete">Incomplete first</option>
+        </select>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+
+    <section class="panel timer">
+      <h2>Focus Timer</h2>
+      <div id="timerDisplay" class="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <label class="small">Length: <input id="timerLength" type="number" min="1" max="120" value="25"> minutes</label>
+    </section>
+
+    <aside class="panel links">
+      <h2>Quick Links</h2>
+      <form id="linkForm" class="inline-form">
+        <input id="linkTitle" placeholder="Title">
+        <input id="linkUrl" placeholder="https://example.com">
+        <button type="submit">Add</button>
+      </form>
+      <div id="linksWrap" class="links-wrap"></div>
+    </aside>
+  </main>
+
+  <footer class="footer">Built with HTML/CSS/JS • Data stored locally in your browser</footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
